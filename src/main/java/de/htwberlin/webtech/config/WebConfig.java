@@ -16,7 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedMethods("*") 
                 .allowedOrigins(
                         "http://localhost:5173",
-                        "https://webtech-frontend-fthr.onrender.com"
+                        "https://booknestfrontend-4cuw.onrender.com"
                 )
                 .allowCredentials(true); 
     }
