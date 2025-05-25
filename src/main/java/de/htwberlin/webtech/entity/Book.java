@@ -1,4 +1,4 @@
-package de.htwberlin.webtech;
+package de.htwberlin.webtech.entity;
 
 import java.util.ArrayList;
 import java.util.List;
