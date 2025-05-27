@@ -15,7 +15,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**") 
                 .allowedMethods("*") 
                 .allowedOrigins(
-                        "http://localhost:5173",
+                        "http://localhost:5174",
                         "https://booknestfrontend-4cuw.onrender.com"
                 )
                 .allowCredentials(true); 
