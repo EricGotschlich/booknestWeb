@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin // Erlaubt Zugriff vom Frontend
-@RequestMapping("/books")
+@RequestMapping("/movie")
+@CrossOrigin(origins = {"http://localhost:5173", "https://booknestfrontend-iaq4.onrender.com"})
+
 public class BookController {
 
     private final bookRepository repository;

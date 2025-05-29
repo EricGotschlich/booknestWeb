@@ -11,13 +11,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
-    public void addCorsMappings(final CorsRegistry registry) {
-        registry.addMapping("/**") 
-                .allowedMethods("*") 
-                .allowedOrigins(
-                        "http://localhost:5173",
-                        "https://booknestfrontend-4cuw.onrender.com"
-                )
-                .allowCredentials(true); 
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:5173")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*");
     }
 }
