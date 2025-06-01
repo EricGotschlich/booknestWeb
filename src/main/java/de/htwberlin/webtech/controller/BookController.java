@@ -17,7 +17,7 @@ public class BookController {
         this.repository = repository;
     }
 
-    @GetMapping("/books")
+    @GetMapping
     public List<Book> getAllBooks() {
         return repository.findAll();
     }
