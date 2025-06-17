@@ -27,6 +27,7 @@ public class BookController {
         final Iterable<Book> result = bookService.getAllBooks();
         return ResponseEntity.ok(result);
     }
+
     @PostMapping
     public ResponseEntity<Book> addBook(@Valid @RequestBody final Book book) {
         final Book created = bookService.addBook(book);

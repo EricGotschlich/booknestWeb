@@ -1,24 +1,32 @@
 package de.htwberlin.webtech.entity;
 
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
 public class Book {
-     private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String title;
     private String author;
+
+    @ElementCollection
     private List<Integer> chapters = new ArrayList<>();
+
     private String summary;
     private String genre;
     private String readingProgress;
-public Book(Long id, String title, String author, String summary, String genre, String readingProgress) {
+
+    public Book(Long id, String title, String author, String summary, String genre, String readingProgress) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.summary = summary;
         this.genre = genre;
         this.readingProgress = readingProgress;
-    
     }
 
     public Book() { }
