@@ -22,4 +22,7 @@ public class BookService {
     public Book addBook(final Book book) {
         return this.ibookRepository.save(book);
     }
+    public void deleteBook(Integer id) {
+        this.ibookRepository.deleteById(id);
+    }
 }

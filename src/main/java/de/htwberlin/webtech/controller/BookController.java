@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin // Erlaubt Zugriff vom Frontend
+@CrossOrigin 
 @RequestMapping("/books")
 public class BookController {
 
@@ -32,5 +32,11 @@ public class BookController {
     public ResponseEntity<Book> addBook(@Valid @RequestBody final Book book) {
         final Book created = bookService.addBook(book);
         return new ResponseEntity<>(created, HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBook(@PathVariable Integer id) {
+        bookService.deleteBook(id);
+        return ResponseEntity.noContent().build();
     }
 }
